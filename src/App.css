@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Menu {
+    width: 100%;
+    background: #b6c4cb;
+    animation: moveWidth 1.5s;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+@keyframes moveWidth {
+    0% {height: 0}
+    100% {height: 100px}
+}
+.Main-Wrap{
+    width: 100%;
+    height: 100px;
+}
+.btn{
+    margin-left: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    min-width: 50px;
+    min-height: 40px;
+    background-color: #6c7da0;
+    border: 5px solid #6c7da0;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 #8691a7;
+    transition-duration: 0.3s;
+}
+.btn:hover{
+    margin-top: 3px;
+    box-shadow: 0 1px 5px #4463c3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    border-radius: 5px;
+    position: absolute;
+    min-width: 70px;
+    background-color: #919dcf;
+    animation: moveMenu 0.5s;
+    animation-fill-mode: forwards;
+    top: 100px;
+}
+@keyframes moveMenu {
+    0% {height: 0}
+    100% {height: 60px}
+}
+.NonActive{
+    display: none;
+}
+#Main-Block{
+    width: 100%;
+    animation: UserDraw 2s;
+    background-color: #272c33;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: row;
+    min-height: 600px;
+}
+@keyframes UserDraw {
+    0%{height: 0; opacity: 0.0}
+    50%{height: 333px; opacity: 0.0}
+    100%{height: auto; opacity: 1}
+}
+.Main-Text-User{
+    background-color: #272c33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 40px 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    animation: UsersDraws 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes UsersDraws {
+    0%{width: 0}
+    100%{width: 100%}
+}
+.Main-Text-User{
+    transition: 5s;
+    padding-bottom: 40px;
+}
+.block1{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+}
+.block1-Inside{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+    width: 95%;
+}
+.AllUser-Info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 7px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.block2{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    animation: block2Draw 1s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+.block2-Inside{
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    overflow: hidden;
+    width: 90%;
+}
+@keyframes block2Draw {
+    0%{width: 20%; opacity: 0.0}
+    100%{width: 50%; opacity: 1}
 }
 
-.App-link {
-  color: #61dafb;
+
+.Details-btn{
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #17a0b2;;
+    background-color:#17a0b2;;
+}
+.Post-btn{
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #2aa44c;
+    background-color:#2aa44c;
+
+}
+.Wrap-Btn{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.Name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.UserName{
+    font-size: 15px;
+    font-weight: 500;
+}
+.Phone-Email-Website{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.Phone-Email-Website>h2{
+    display: inline-block;
+    padding-right: 5px;
+    font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Info-PEW{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+.true{
+    display: block;
+    animation: PostDraw 1s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+.false{
+    display: none;
+}
+@keyframes PostDraw {
+    0%{
+       height: 0;
+    }
+    100%{
+        height: 220px;
+    }
 }
